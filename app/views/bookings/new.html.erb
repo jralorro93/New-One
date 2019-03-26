@@ -1,0 +1,5 @@
+<h1>Let's have party, gurl!!!!</h1>
+
+<%=form_for @booking do |f| %>
+  <%=f.collection_select :queen_ids, Queen.all, :id, :name%>
+<%end%>
