@@ -1,5 +1,8 @@
 <h1>Let's have party, gurl!!!!</h1>
 
+
 <%=form_for @booking do |f| %>
-  <%=f.collection_select :queen_ids, Queen.all, :id, :name%>
+  <%=f.collection_select :queen_ids, Queen.all, :id, :drag_name%><br>
+  <%=f.collection_select :venue_id, Venue.all, :id, :name%><br>
+  <%=f.submit%>
 <%end%>

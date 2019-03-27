@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.create(booking_params)
+    redirect_to current_user
   end
 
   def show
