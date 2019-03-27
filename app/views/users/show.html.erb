@@ -1,3 +1,32 @@
-<h1>Hey, <%=@user.full_name%>! Welcome to Queen For A Day!</h1>
+<h1>Hey, <%=@user.first_name%>! Welcome to Queen For A Day!</h1>
 
 <%= link_to 'Create A Booking!', '/bookings/new' %>
+
+ <!-- Shows the date and time of booking, along with editting-->
+ <!-- and deleting the booking -->
+<div>
+  Current booking: <br>
+  <ol>
+    <%if @user.bookings.any?%>
+      <%@user.bookings.each do |booking|%>
+        <li><%=booking.date.strftime("%b %d, %Y")%> at <%=booking.time.strftime("%H:%M %p")%></li><br>
+        <!-- deletes the booking -->
+            <%= form_for booking, method: :delete, local: true do |form| %>
+              <%= form.submit "Remove" %>
+            <%end%>
+          <!-- edits booking -->
+          <%= link_to "Edit", edit_booking_path(booking)%>
+      <%end%>
+    <%else%>
+      You don't have any bookings! <%= link_to "Make a booking here!", '/bookings/new' %>
+    <%end%>
+  </ol>
+</div>
+
+<div>
+  <%=link_to "List of Queens", '/queens'%>
+</div>
+
+<div>
+  <%=link_to "List of Venues", '/venues'%>
+</div>
