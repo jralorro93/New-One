@@ -1,9 +1,10 @@
 <h1>Check out all these fabulous Queens!</h1>
 
-<ol>
+<div>
     <%@queens.each do |queen|%>
-      <li><%= link_to queen.drag_name, queen%></li>
+      <div class="each"><%= link_to queen.drag_name, queen%></div>
     <%end%>
-</ol>
+</div>
+
 
 <!-- Add css -->

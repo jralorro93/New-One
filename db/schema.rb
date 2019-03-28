@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_163305) do
+ActiveRecord::Schema.define(version: 2019_03_28_140344) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "queen_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_163305) do
     t.string "drag_name"
     t.string "hometown"
     t.string "img_url"
+    t.string "bio"
   end
 
   create_table "users", force: :cascade do |t|

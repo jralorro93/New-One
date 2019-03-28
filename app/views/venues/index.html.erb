@@ -1,7 +1,6 @@
 <h1>Venues</h1>
 
-<ol>
+
 <% @venues.each do |venue|%>
-  <li><%= link_to venue.name, venue %></li>
+  <div class="each"><%= link_to venue.name, venue %></div>
 <%end%>
-</ol>

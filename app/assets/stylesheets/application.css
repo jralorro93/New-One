@@ -13,3 +13,120 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   background-color: rgba(201, 76, 76, 0.3);
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   background-image: url("https://www.thewrap.com/wp-content/uploads/2019/01/Plastique-Tiara.jpg");
+   background-position: right;
+ }
+
+ /* .login {
+   margin: auto;
+   width: 230px;
+   height: 175px;
+   border: 4px solid black;
+   padding: 60px
+ } */
+
+ .login {
+    position:fixed;
+    padding: 6em;
+    top: 50%;
+    left: 50%;
+    width:20em;
+    height:11em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 3px solid black;
+    background-color: white;
+ }
+
+ .greeting {
+   text-align: center;
+   text-decoration: underline;
+   text-shadow: 2px 1px white;
+   font-size: 50px;
+ }
+
+ .create_booking_link {
+   font-size: 30px;
+   width: 320px;
+   padding: 10px;
+   border: 5px solid gray;
+   margin: 0;
+   float: left;
+   background-color: white;
+   text-align: center;
+   text-shadow: 1px 1px pink;
+ }
+
+ .booking {
+  background-color: white;
+  width: 375px;
+  border: 25px solid purple;
+  padding: 25px;
+  margin: auto;
+ }
+
+ .create_login{
+   position:fixed;
+   padding: 6em;
+   top: 50%;
+   left: 50%;
+   width:20em;
+   height:11em;
+   margin-top: -9em; /*set to a negative number 1/2 of your height*/
+   margin-left: -15em; /*set to a negative number 1/2 of your width*/
+   border: 3px solid black;
+   background-color: white;
+ }
+
+ .create_new_booking {
+   position: fixed;
+   padding: 40px;
+   top: 50%;
+   left: 50%;
+   width:12em;
+   height: 10em;
+   margin-top: -11em; /*set to a negative number 1/2 of your height*/
+   margin-left: -13em; /*set to a negative number 1/2 of your width*/
+   border: 3px solid black;
+   background-color: white;
+ }
+
+
+ .listings_queens {
+   width: 320px;
+   padding: 10px;
+   border: 5px solid gray;
+   margin: 0;
+   float: left;
+   background-color: white;
+   text-align: center;
+   text-shadow: 1px 1px pink;
+ }
+
+.listings_venues {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  float: right;
+  background-color: white;
+  text-align: center;
+  text-shadow: 1px 1px pink;
+}
+
+.bio {
+  color: black;
+  text-shadow: 2px 1px white;
+}
+
+.each {
+  background-color: lightpink;
+  width: 300px;
+  border: 25px solid magenta;
+  padding: 25px;
+  margin: 25px;
+}

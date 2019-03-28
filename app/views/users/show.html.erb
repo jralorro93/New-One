@@ -1,18 +1,19 @@
-<h1>Hey, <%=@user.first_name%>! Welcome to Queen For A Day!</h1>
-
+<h1 class="greeting">Hey, <%=@user.first_name%>! Welcome to Queen For A Day!</h1>
+<div class="create_booking_link">
 <%= link_to 'Create A Booking!', '/bookings/new' %>
-
+</div>
  <!-- Shows the date and time of booking, along with editting-->
  <!-- and deleting the booking -->
-<div>
+<div class="booking">
   Current booking: <br>
   <ol>
     <%if @user.bookings.any?%>
       <%@user.bookings.each do |booking|%>
-        <li><%=booking.date.strftime("%b %d, %Y")%> at <%=booking.time.strftime("%H:%M %p")%></li><br>
+      <!-- Booking date, time, then location -->
+        <li><%=booking.date.strftime("%b %d, %Y")%> at <%=booking.time.strftime("%H:%M %p")%> in <%=booking.venue.name%></li><br>
         <!-- deletes the booking -->
             <%= form_for booking, method: :delete, local: true do |form| %>
-              <%= form.submit "Remove" %>
+              <%= form.submit "Remove", class: "button"%>
             <%end%>
           <!-- edits booking -->
           <%= link_to "Edit", edit_booking_path(booking)%>
@@ -23,10 +24,10 @@
   </ol>
 </div>
 
-<div>
+<div class="listings_queens">
   <%=link_to "List of Queens", '/queens'%>
 </div>
 
-<div>
+<div class="listings_venues">
   <%=link_to "List of Venues", '/venues'%>
 </div>

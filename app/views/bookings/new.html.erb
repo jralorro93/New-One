@@ -1,14 +1,16 @@
-<h1>Let's have party, gurl!!!!</h1>
-<% if @booking.errors.any? %>
-  <% @booking.errors.full_messages.each do |message| %>
-    <%= message %>
+<div class="create_new_booking">
+  <h4>Let's have party, gurl!!!!</h4>
+  <% if @booking.errors.any? %>
+    <% @booking.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
   <% end %>
-<% end %>
-<!--Add validations -->
-<%=form_for @booking do |f| %>
-  <%=f.collection_select :queen_id, Queen.all, :id, :drag_name, {prompt: "Pick your Queen" }%><br>
-  <%=f.collection_select :venue_id, Venue.all, :id, :name, {prompt: "Pick the Venue" }%><br>
-  <%=f.date_select :date, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year, end_year: Date.today.year + 5}%><br>
-  <%=f.time_select :time, {prompt: "Time" }%><br>
-  <%=f.submit%>
-<%end%>
+  <!--Add validations -->
+  <%=form_for @booking do |f| %>
+    <%=f.collection_select :queen_id, Queen.all, :id, :drag_name, {prompt: "Pick your Queen" }%><br>
+    <%=f.collection_select :venue_id, Venue.all, :id, :name, {prompt: "Pick the Venue" }%><br>
+    <%=f.date_select :date, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year, end_year: Date.today.year + 5}%><br>
+    <%=f.time_select :time, {prompt: "Time" }%><br>
+    <%=f.submit%>
+  <%end%>
+</div>
