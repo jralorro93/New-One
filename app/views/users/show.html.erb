@@ -10,7 +10,7 @@
     <%if @user.bookings.any?%>
       <%@user.bookings.each do |booking|%>
       <!-- Booking date, time, then location -->
-        <li><%=booking.date.strftime("%b %d, %Y")%> at <%=booking.time.strftime("%H:%M %p")%> in <%=booking.venue.name%></li><br>
+        <li><%=booking.date.strftime("%b %d, %Y")%> at <%=booking.time.strftime("%H:%M %p")%> in <%=link_to booking.venue.name, venue_path(booking.venue)%></li><br>
         <!-- deletes the booking -->
             <%= form_for booking, method: :delete, local: true do |form| %>
               <%= form.submit "Remove", class: "button"%>

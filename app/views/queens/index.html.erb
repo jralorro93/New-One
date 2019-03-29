@@ -2,9 +2,9 @@
 
 <div>
     <%@queens.each do |queen|%>
-      <div class="each"><%= link_to queen.drag_name, queen%></div>
-    <%end%>
+      <div class="gallery">
+      <%= link_to queen.drag_name, queen%>
+      <%= image_tag(queen.img_url)%>
+    <% end%>
+    </div>
 </div>
-
-
-<!-- Add css -->
